@@ -1,11 +1,7 @@
 # Source: https://blog.alexellis.io/continuous-integration-docker-windows-containers/
 
-FROM crichmond1989/windows-java:jre1.8
+FROM crichmond1989/java-windows:jre1.8
 
-SHELL ["powershell"]
-ARG BASE_URL
-ARG SECRET
-
-RUN Invoke-WebRequest ($env:BASE_URL + "/jnlpJars/slave.jar") -OutFile "slave.jar"
+COPY ./resources/slave.jar ./slave.jar
 
 ENTRYPOINT ["java", "-jar", "./slave.jar"]
