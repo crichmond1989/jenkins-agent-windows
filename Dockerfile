@@ -4,4 +4,4 @@ FROM richmondsoftworks/java-windows:jre1.8
 
 COPY ./resources/slave.jar ./slave.jar
 
-ENTRYPOINT ["java", "-jar", "./slave.jar"]
+CMD java -jar ./slave.jar
