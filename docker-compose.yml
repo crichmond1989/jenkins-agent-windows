@@ -1,5 +1,5 @@
 version: "3"
 services:
   latest:
-    image: crichmond1989/jenkins-agent-windows:latest
+    image: richmondsoftworks/jenkins-agent-windows:latest
     build: .
